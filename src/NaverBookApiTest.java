@@ -9,13 +9,7 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-
-import org.apache.tomcat.jni.File;
-import org.w3c.dom.Document;
-import org.xml.sax.SAXException;
+import org.json.simple.JSONObject;
 
 import vo.Book;
 
@@ -28,7 +22,7 @@ public class NaverBookApiTest {
 		 //java코드로 특정 url에 요청보내고 응답받기
         //기본 자바 API를 활용한 방법
         
-        String apiURL = "https://openapi.naver.com/v1/search/book.xml?query==" + title; 
+        String apiURL = "https://openapi.naver.com/v1/search/book?query==" + title; 
         URL url = new URL(apiURL); //API 기본정보의 요청 url을 복사해오고 필수인 query를 적어줍니당! 
         
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -51,12 +45,18 @@ public class NaverBookApiTest {
         
         br.close();
         con.disconnect();
-        // XML 문서 파싱
- 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
- 		DocumentBuilder documentBuilder = factory.newDocumentBuilder();
- 		Document document = documentBuilder.parse(sb.toString());
- 		
-        		
+        System.out.println(sb);
+     // JSONObjet를 가져와서 key-value를 읽습니다.
+        JSONObject jObject = new JSONObject();
+        String title = jObject.getString("title");
+        String url = jObject.getString("url");
+        Boolean draft = jObject.getBoolean("draft");
+        int star = jObject.getInt("star");
+
+        System.out.println("title: " + title);
+        System.out.println("url: " + url);
+        System.out.println("draft: " + draft);
+        System.out.println("star: " + star);
 		return null;
 
 	}
