@@ -73,7 +73,7 @@
 			
   
   
-  <select class="join-info mt20">
+  <select class="js-join">
   
     <option value="0">선호 장르</option>
     <option value="1">소설</option>
