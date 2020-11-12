@@ -67,10 +67,15 @@
 								<p class="check" style="display: none;"></p>
 							</div>
 						</div>
-					<div class="register-title"><p>선택입력항목</p></div>
-				<!-- <!-- 	<table class='radio-tbl'>
+						
+					<!-- 	
+					<table class='radio-tbl'>
 						<caption>선택입력항목</caption>
-					</table> --> -->
+						<colgroup>
+							<col width="150px" />
+							<col width="*" />
+						</colgroup></table> -->
+				<div class="register-title"><p>선택입력항목</p></div>
 						<div class="join-check">
 							<div>
 								<div class="checkbox">
