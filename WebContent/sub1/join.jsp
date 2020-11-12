@@ -67,10 +67,8 @@
 								<p class="check" style="display: none;"></p>
 							</div>
 						</div>
-					<div class="register-title"><p>선택입력항목</p></div>
-				<!-- <!-- 	<table class='radio-tbl'>
-						<caption>선택입력항목</caption>
-					</table> --> -->
+						
+				<div class="register-title2"><p>추천 받고 싶은 분야</p></div>
 						<div class="join-check">
 							<div>
 								<div class="checkbox">
