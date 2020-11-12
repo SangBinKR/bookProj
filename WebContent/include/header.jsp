@@ -139,7 +139,7 @@
 				</ul>
 				<ul class="lnb">
 					<li><a href="../sub5/charge.jsp">캐시충전</a>
-					<li><a href="https://www.bookcube.com/customer.asp">고객센터</a>
+					<li><a href="../sub5/notice.jsp">고객센터</a>
 				</ul>
 			</div>
 		</div>
