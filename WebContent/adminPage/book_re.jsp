@@ -69,11 +69,12 @@
                             			<option>여행</option>
                             			<option>시</option>
                             		</select>
-                            		<select id="novel"> 
-                            			<option>소설</option>
-                            			<option>에세이</option>
-                            			<option>여행</option>
-                            			<option>시</option>
+                            		<select id="si"> 
+                            			<option>수학</option>
+                            			<option>과학</option>
+                            			<option>IT비즈니스</option>
+                            			<option>자격증</option>
+                            			<option>프로그래밍</option>
                             		</select>
                             	</td>
                             </tr>
