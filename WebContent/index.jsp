@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>newfile</h1>
+	<h1>MVC게시판</h1>
+	<h1><a href="BoardWriteForm.bo">글쓰기</a></h1>
 </body>
 </html>

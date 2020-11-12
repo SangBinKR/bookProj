@@ -3,6 +3,7 @@
 <jsp:include page="../include/header.jsp"/>
 <section class="" id="contents">
 			
+			
 <div class="today-hot">
 	<h3 class="hot-title">오늘의 추천</h3>
 	<div class="hot-inner">
