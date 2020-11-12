@@ -22,18 +22,21 @@
                     <table summary="공지사항" class="customer-table notice">
                         <caption>자유게시판</caption>
                         <colgroup>
-                            <col width="85%">
+                            <col width="75%">
+                            <col width="10%">
                             <col width="*">
                         </colgroup>
                         <thead>
                             <tr>
                                 <th scope="col" abbr="제목">제목</th>
+                                <th scope="col" abbr="등록일">작성자</th>
                                 <th scope="col" abbr="등록일">등록일</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td><a href="notice_view.jsp">장르/만화 정액권 판매 종료 예정 안내</a></td>
+                                <td>master</td>
                                 <td>2020/10/27</td>
                             </tr>
                             <!-- 				<tr> -->
