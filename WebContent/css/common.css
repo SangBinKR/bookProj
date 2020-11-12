@@ -43,6 +43,10 @@
 .btn_inner{margin: 15px 0 10px;text-align: right;}
 .btn_inner .btn{padding: 7px 10px;}
 .btn{text-align:center;color:#333;padding:0 8px;border:1px solid #c1c1c1;box-shadow:0 2px #f2f2f2;font-size:13px;line-height:23px;border-radius:4px;font-weight:600;}
+.default-btn-wrap{text-align:center;}
+.default-btn-wrap input[type="submit"],
+.default-btn-wrap a{display:inline-block;line-height:30px;height:32px;box-sizing:border-box;width:81px;margin:0 2px;color:#333;font-weight:bold;font-size:13px;background: #fff;}
+
 /* select 커스텀 */
 .arrayBox{text-align:center;padding:0 10px;border:1px solid #cdced1;position:relative;}
 .arrayBox .s-result{display:inline-block;color:#333;font-size:14px;font-weight:600;padding:8px 0;padding-right:30px;background:url(../images/array-bg.png) no-repeat right center;}
@@ -54,6 +58,7 @@ box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(249,132,90,.6);}
 .arrayBox ul li a.on{background: url(../images/radio_on.png) no-repeat 14px center;}
 .arrayBox ul li:hover{background:#f4f4f4;}
 .arrayBox ul li a.on{color:#17897a;}
+
 /* 라디오버튼 커스텀 */
 .k-array{}
 .k-array:after{content:"";display:block;clear:both;}

@@ -1896,10 +1896,10 @@ border-radius:4px;background:#fff;}
 .customer-notice tbody td{line-height:44px;border-bottom:1px solid #d4d5d6;font-size:15px;color:#666;font-weight:600;}
 .customer-notice tbody tr:nth-child(1) td:nth-child(2){font-weight:600;font-size:15px;color:#333;}
 .customer-notice tbody td:nth-child(1){text-align:center;font-weight:600;background:#f4f4f4;color:#333;}
-.customer-notice tbody td:nth-child(2){border-left:1px solid #d4d5d6;padding-left:25px;}
+.customer-notice tbody td:nth-child(2){border-left:1px solid #d4d5d6;padding-left: 13px;}
 .customer-notice tbody td:nth-child(2) p{padding:33px 0;line-height:22px;font-weight:normal;font-size:15px;color:#666;}
-.default-btn-wrap{text-align:center;}
-.default-btn-wrap a{display:inline-block;line-height:30px;height:32px;box-sizing:border-box;width:81px;margin:0 2px;color:#333;font-weight:bold;font-size:13px;}
+.customer-notice tbody td.th{text-align:center;font-weight:600;background:#f4f4f4;color:#333;}
+
 
 .customer-use-wrap{background:#fff;border-top:2px solid #333;}
 .customer-s-menu{}
