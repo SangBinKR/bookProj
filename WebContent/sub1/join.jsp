@@ -68,7 +68,7 @@
 							</div>
 						</div>
 						
-				<div class="register-title2"><p>선택입력항목</p></div>
+				<div class="register-title2"><p>추천 받고 싶은 분야</p></div>
 						<div class="join-check">
 							<div>
 								<div class="checkbox">

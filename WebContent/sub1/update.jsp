@@ -136,18 +136,13 @@
 								</td>
 							</tr>
 						</tbody>
-					</table>
-					<div class="register-title"><p>선택입력항목</p></div>
-					<table class='radio-tbl'>
-						<caption>선택입력항목</caption>
-						<colgroup>
-							<col width="150px" />
-							<col width="*" />
-						</colgroup>
-						<tbody>
 							<tr>
 								<th><label for='register_zipcode'>우편번호</label></th>
 								<td><input type='text' name='register_zipcode' id='register_zipcode' value=''  maxlength="24" readonly /></td>
+							</tr>
+							<tr>
+								<th><label for='sample4_roadAddress'>도로명주소</label></th>
+								<td><input type='text' name='register_address1' id='register_address' class="register_address" value='' readonly /></td>
 							</tr>
 							<tr>
 								<th><label for='register_address'>상세주소</label></th>
@@ -189,6 +184,93 @@
 							</tr>
 						</tbody>
 					</table>
+					
+					<div class="register-title3"><p>선호 장르</p></div>
+					<table class='radio-tbl'>
+						<caption>선택입력항목</caption>
+						<colgroup>
+							<col width="150px" />
+							<col width="*" />
+						</colgroup>
+					<div class="join-check2">
+							<div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="all_chk" value="">
+										<span><i></i></span>
+									</label>
+									<p>소설</p>
+								</div>
+								
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="all_chk" value="">
+										<span><i></i></span>
+									</label>
+									<p>인문</p>
+								</div>
+								
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="all_chk" value="">
+										<span><i></i></span>
+									</label>
+									<p>자기계발</p>
+								</div>
+								
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="all_chk" value="">
+										<span><i></i></span>
+									</label>
+									<p>경제</p>
+								</div>
+								
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="all_chk" value="">
+										<span><i></i></span>
+									</label>
+									<p>과학</p>
+								</div>
+								
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="all_chk" value="">
+										<span><i></i></span>
+									</label>
+									<p>IT</p>
+								</div>
+								
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="all_chk" value="">
+										<span><i></i></span>
+									</label>
+									<p>취미</p>
+								</div>
+								
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="all_chk" value="">
+										<span><i></i></span>
+									</label>
+									<p>만화</p>
+								</div>
+								
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="all_chk" value="">
+										<span><i></i></span>
+									</label>
+									<p>웹소설</p>
+								</div>
+								
+							</div>
+						</div>
+					</table>
+					
+					
 					<div class="register-btn">
 						<input type='button' name='' class="register_commit" value='수정' />
 						<a href="https://www.bookcube.com" class="btn">취소</a>
