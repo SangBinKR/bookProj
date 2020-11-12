@@ -68,14 +68,7 @@
 							</div>
 						</div>
 						
-					<!-- 	
-					<table class='radio-tbl'>
-						<caption>선택입력항목</caption>
-						<colgroup>
-							<col width="150px" />
-							<col width="*" />
-						</colgroup></table> -->
-				<div class="register-title"><p>선택입력항목</p></div>
+				<div class="register-title2"><p>선택입력항목</p></div>
 						<div class="join-check">
 							<div>
 								<div class="checkbox">
