@@ -132,7 +132,7 @@
 				<h2 class="hide">메인메뉴</h2>
 				<ul class="gnb">
 					<li><a href="../main/index.jsp" class="on">홈</a></li>
-					<li><a href="../sub2/board.jsp">게시판</a></li>
+					<li><a href="../sub2/free_board.jsp">게시판</a></li>
 					<li><a href="../sub5/card.jsp">카트</a></li>
 					<li><a href="../sub5/mypage.jsp">마이페이지</a></li>
 					<!-- <li><a href="https://www.bookcube.com/toon/main.asp">관리자페이지</a></li> -->
