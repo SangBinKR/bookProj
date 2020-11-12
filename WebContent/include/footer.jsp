@@ -103,10 +103,10 @@
 <script>
 $(function(){
 //탑버튼
-	var top_left = $(".footer-inner").offset().left + $(".footer-inner").width();
-	$(".topBtn").css({
-		"left" : top_left + 20
-	});
+// 	var top_left = $(".footer-inner").offset().left + $(".footer-inner").width();
+// 	$(".topBtn").css({
+// 		"left" : top_left + 20
+// 	});
 	$(".topBtn").on("click",function(){
 		$("html,body").animate({
 			scrollTop : 0
