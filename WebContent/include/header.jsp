@@ -132,14 +132,14 @@
 				<h2 class="hide">메인메뉴</h2>
 				<ul class="gnb">
 					<li><a href="../main/index.jsp" class="on">홈</a></li>
-					<li><a href="../sub2/board.jsp">게시판</a></li>
+					<li><a href="../sub2/free_board.jsp">게시판</a></li>
 					<li><a href="../sub5/card.jsp">카트</a></li>
 					<li><a href="../sub5/mypage.jsp">마이페이지</a></li>
 					<!-- <li><a href="https://www.bookcube.com/toon/main.asp">관리자페이지</a></li> -->
 				</ul>
 				<ul class="lnb">
 					<li><a href="../sub5/charge.jsp">캐시충전</a>
-					<li><a href="https://www.bookcube.com/customer.asp">고객센터</a>
+					<li><a href="../sub5/notice.jsp">고객센터</a>
 				</ul>
 			</div>
 		</div>
