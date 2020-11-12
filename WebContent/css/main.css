@@ -1409,6 +1409,10 @@ box-shadow:0 3px 5px 3px rgba(0,0,0,.2);box-sizing:border-box;z-index:9000;text-
 .user-modify h3{font-size:20px;color:#333;margin-left:18px;padding-bottom:18px;font-weight:600;}
 .user-modify .register-title{margin-bottom:20px;padding-left:18px;border-top:1px solid #cdced1;border-bottom:1px solid #cdced1;background:#f6f6f6;}
 .user-modify .register-title p{font-size:16px;color:#17897a;line-height:42px;font-weight:600;}
+/* 추가 201112 차준희 */
+.register-title2{border-top:1px solid #cdced1;background:#f6f6f6;}
+.register-title2 p{font-size:16px;color:#17897a;line-height:42px;font-weight:600;}
+/**/
 .user-modify table{margin-bottom:53px;width:100%;border-top:1px solid #e0e1e2;border-bottom:1px solid #e0e1e2;}
 .user-modify table th{background:#f4f4f4;font-size:15px;color:#333;font-weight:600;padding:10px 0 10px 18px;border-top:1px solid #fff;text-align:left;}
 .user-modify table td{font-size:15px;color:#333;font-weight:600;border-top:1px solid #f4f4f4;padding:10px 0 10px 25px;}
