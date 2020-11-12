@@ -69,21 +69,83 @@
 						</div>
 							
 						
-						<div class="join-info mt20">
-			
-  
-  
-  <select class="js-join">
-  
-    <option value="0">선호 장르</option>
-    <option value="1">소설</option>
-    <option value="2">인문</option>
-    <option value="3">취미</option>
-    <option value="4">Ford</option>
-    <option value="5">Honda</option>
-    <option value="6">Jaguar</option>
-  </select>
-</div>
+						<div class="join-check">
+							<div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="all_chk" value="">
+										<span><i></i></span>
+									</label>
+									<p>소설</p>
+								</div>
+								
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="all_chk" value="">
+										<span><i></i></span>
+									</label>
+									<p>인문</p>
+								</div>
+								
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="all_chk" value="">
+										<span><i></i></span>
+									</label>
+									<p>자기계발</p>
+								</div>
+								
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="all_chk" value="">
+										<span><i></i></span>
+									</label>
+									<p>경제</p>
+								</div>
+								
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="all_chk" value="">
+										<span><i></i></span>
+									</label>
+									<p>과학</p>
+								</div>
+								
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="all_chk" value="">
+										<span><i></i></span>
+									</label>
+									<p>IT</p>
+								</div>
+								
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="all_chk" value="">
+										<span><i></i></span>
+									</label>
+									<p>취미</p>
+								</div>
+								
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="all_chk" value="">
+										<span><i></i></span>
+									</label>
+									<p>만화</p>
+								</div>
+								
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="all_chk" value="">
+										<span><i></i></span>
+									</label>
+									<p>웹소설</p>
+								</div>
+								
+							</div>
+						</div>
+								
 						
 							<!-- 
 <input type="text" id="sample4_postcode" placeholder="우편번호">
@@ -158,7 +220,7 @@
 							
 							
 							
-							
+						
 							<p class="young-ps">*14세미만 회원가입 시 법정대리인의 이메일을 입력해 주세요.</p> 
 						</div>
 						<div class="join-check">
