@@ -8,21 +8,25 @@ public class ActionForward {
 	 * 포워딩 방식(Redirect or Dispatcher) 을 다루기 위한 클래스
 	 */
 
-	private String path; //포워딩할 view페이지 URL을 저장
-	private boolean redirect; //포워딩 방식 저장
-	//true: Redirect방식 false: Dispacher방식
 	
+	private String path; // 포워딩 할 View 페이지 URL을 저장
+	private boolean Redirect; // 포워딩 방식 저장
+	// true : Redirect방식, false : Dispatcher 방식
+	
+	
+	// Getter/ Setter정의
 	public String getPath() {
 		return path;
 	}
 	public void setPath(String path) {
 		this.path = path;
 	}
-	public boolean isRedirect() {
-		return redirect;
+	public boolean isRedirect() { //is 자동으로붙여서 변수선언시에 is안붙여도된다.
+		return Redirect;
 	}
 	public void setRedirect(boolean redirect) {
-		this.redirect = redirect;
+		Redirect = redirect;
 	}
+	
 	
 }

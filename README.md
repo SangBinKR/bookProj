@@ -11,6 +11,7 @@ https://docs.google.com/document/d/1RQDDsJciE-XwVYH_tseK5u28UeBb-HkSt1Xl-WKzGcM/
 도서 배송 서비스
 
 ### 사용 기술
+JAVA, JAVASCRIPT, MYSQL, JSP, AJQX, NAVER API, JSOUP(북큐브 크롤링)
 
 
 ### 1.3. 주제에 따른 기능
@@ -32,12 +33,5 @@ https://docs.google.com/document/d/1RQDDsJciE-XwVYH_tseK5u28UeBb-HkSt1Xl-WKzGcM/
 추천하기, 추천도서 sns공유
 장르에 따른 추천책
 희망도서 신청
-
-### 1.4. DB설정
-1. Hostname : 192.168.1.22 
-2. Port : 3306
-3. Username : team2_db
-4. password : store in Vault 클릭 후 abcd1234
-5. deFault Schema : team_db
 
 
