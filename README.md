@@ -11,6 +11,7 @@ https://docs.google.com/document/d/1RQDDsJciE-XwVYH_tseK5u28UeBb-HkSt1Xl-WKzGcM/
 도서 배송 서비스
 
 ### 사용 기술
+JAVA, JAVASCRIPT, MYSQL, JSP, AJQX, NAVER API, JSOUP(북큐브 크롤링)
 
 
 ### 1.3. 주제에 따른 기능
