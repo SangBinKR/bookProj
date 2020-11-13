@@ -30,7 +30,7 @@ public class BoardFrontController extends HttpServlet {
 		// 각 요청 처리에 필요한 객체를 다루는 변수 선언
 		// Action 패키지의 interface
 		Action action = null; // => 이녀석은 어...
-		ActionForward forward = null; // => path(URL경로), redirect(방식설정) 하지않음.
+		ActionForward forward = null; // => path(URL경로), redirect(방식설정) 
 		
 		// if문을 사용하여 각 서블릿 주소 판별 및 각 요청 처리를 위한 작업 요청
 		// 1. BoardWriteForm.bo 요청에 대한 처리
@@ -47,7 +47,7 @@ public class BoardFrontController extends HttpServlet {
 			 * 
 			 */
 			// 1. ActionForward 객체 생성 (변수는 이미 선언되어 있음)
-			forward = new ActionForward(); // ActionForward객체불러와서
+			forward = new ActionForward(); // ActionForward객체불러와서 [
 			// 2. 포워딩 경로 설정
 			forward.setPath("/sub2/free_board_writeForm.jsp"); // path위치 설정 => BoardWriteForm.bo 이렇게불러왔을때 qna_board_write.jsp"여기로감
 			// 3. 포워딩 방식 설정(Dispatcher 방식) // redirect false기본값이니까 dispatcher 방식
@@ -63,7 +63,7 @@ public class BoardFrontController extends HttpServlet {
 				// 2. Action 클래스의 excute() 메서드 호출
 				// => 리턴되는 ActionForward 객체 전달 받기 (직접 생성하지 않음!)
 				// throws에 의해 예외가 전달되므로 try ~ catch 필요 
-				forward = action.execute(request, response); // 리턴되는것 받기만 하면됨 action클래스에서 만들어낼것
+				forward = action.excute(request, response); // 리턴되는것 받기만 하면됨 action클래스에서 만들어낼것
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

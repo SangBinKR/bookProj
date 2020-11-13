@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
-<<<<<<< HEAD
 <!-- DBCP(DataBase Connection Pool) 설정 
 	- 서버에 공유할 커넥션 풀을 위한 리소스 정의
 	- Resource 태그 내에 커넥션 풀에 필요한 리소스들을 속성="값" 형태로 정의
@@ -37,23 +36,6 @@
 		
 		
 
-
-
-=======
-	<Resource
-			name="jdbc/MySQL"
-			auth="Container"
-			type="javax.sql.DataSource"
-			username="team2_db"
-			password="abcd1234"
-			driverClassName="com.mysql.jdbc.Driver"
-			factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
-			url="jdbc:mysql://localhost:3306/jsp_model2_1?serverTimezone=UTC"
-			maxActive="500"
-			maxIdle="20"/>
->>>>>>> branch 'master' of https://github.com/jy12356/bookProj.git
-
-<!-- </Context> -->
 <Resource
 			name="jdbc/MySQL"
 			auth="Container"

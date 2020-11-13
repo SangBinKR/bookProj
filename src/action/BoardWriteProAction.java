@@ -15,16 +15,15 @@ import vo.BoardBean;
 
 public class BoardWriteProAction implements Action {
 
-	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println("BoardWriteProAction!");
 		
-		ActionForward forward = null; //왜가져왔니? path랑 redirect정할거?
+		ActionForward forward = null; // path, redirect 를 null로 .. 왜.. 에러날까이거안하면
 		
 		
 		// 현재 컨텍스트(객체) 정보 가져오기 위해 
 		// request 객체의 getServletContext() 메서드를 호출
-		ServletContext context = request.getServletContext();
+		ServletContext context = request.getServletContext(); // 보낸걸 여기서 다받는건가
 		
 		// 프로젝트 상에서 설정한 가상 업로드 폴더 경로 지정
 		// 현재 루트 위치가 webcontent 폴더이므로 하위 폴더를 "/하위폴더명" 지정
@@ -92,11 +91,11 @@ public class BoardWriteProAction implements Action {
 //		System.out.println("파일명 : " + board_file);
 		//-----------------------------------------------------------------------------------------------------------
 		BoardBean boardBean = new BoardBean();
-		boardBean.setBoard_name(multi.getParameter("board_name"));
-		boardBean.setBoard_pass(multi.getParameter("board_pass"));
-		boardBean.setBoard_subject(multi.getParameter("board_subject"));
-		boardBean.setBoard_content(multi.getParameter("board_content"));
-		boardBean.setBoard_file(multi.getOriginalFileName("board_file")); // 주의!
+		boardBean.setBoard_name(multi.getParameter("id")); // 작성자
+//		boardBean.setBoard_pass(multi.getParameter("board_pass"));
+		boardBean.setBoard_subject(multi.getParameter("title"));
+		boardBean.setBoard_content(multi.getParameter("desc"));
+		boardBean.setBoard_file(multi.getOriginalFileName("file")); // 주의!
 		
 		
 		
@@ -202,6 +201,12 @@ public class BoardWriteProAction implements Action {
 		
 		
 		
+	}
+
+	@Override
+	public ActionForward excute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
