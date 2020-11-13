@@ -182,6 +182,19 @@
 									</div>
 								</td>
 							</tr>
+							
+							<tr>
+								<th><label>생년월일</label></th>
+								<td>
+										<div class="js-join2">
+											<label><input type="text" name="" class=""></label>
+									</div>
+								</td>
+							</tr>
+							
+							
+							
+								
 						</tbody>
 					</table>
 					
