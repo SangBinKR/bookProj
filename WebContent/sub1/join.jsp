@@ -43,29 +43,15 @@
 							
 							
 							<!-- 수정중 -->
-							
-							<div class="js-join">
-								<input type="text" name="" placeholder="생년월일  예) 20201225" class="">
-								<p class="check" style="display: none;"></p>
-							</div>
-							
-							
 						<div class="join-info mt20">
-						
-						
-						
-						
-							<div class="js-join postnuminner clearfix" >
-								<input type="text" name="ad-01" id="sample4_postcode" placeholder="우편번호" class="postnum">
+							<div class="js-join">
+								<input type="text" name="ad-01" id="sample4_postcode" placeholder="우편번호" class="strMail">
 								<p class="check" style="display: none;"></p>
-								<input type="button" onclick="sample4_execDaumPostcode()" value="우편번호" class="postbtn"><br>
 							</div>
 							<div class="js-join">
-							
-							
-							
-							
-							
+								<input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
+							</div>
+							<div class="js-join">
 								<input type="text" name="ad-0" id="sample4_roadAddress" placeholder="도로명주소" class="strMail">
 <span id="guide" style="color:#999;display:none"></span>
 								<p class="check" style="display: none;"></p>
@@ -82,10 +68,7 @@
 							</div>
 						</div>
 						
-						
-						
-						
-				<div class="register-title2"><p>선호 장르</p></div>
+				<div class="register-title2"><p>선택입력항목</p></div>
 						<div class="join-check">
 							<div>
 								<div class="checkbox">

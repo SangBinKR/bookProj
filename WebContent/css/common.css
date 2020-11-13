@@ -79,23 +79,3 @@ box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(249,132,90,.6);}
 .paging .arr img{vertical-align:top;}
 .paging .prev{margin-right:10px;}
 .paging .next{margin-left:10px;}
-
-/*게시판 css*/
-.board{padding:20px 0 100px;width:900px;margin:0 auto;box-sizing:border-box;}
-.board-top-menu{margin-top:18px;margin-bottom:35px;border:1px solid #d5d5d5;border-bottom:1px solid #b7b7b7;background:#fff;border-radius:6px;}
-.board-top-menu ul{}
-.board-top-menu ul:after{content:"";display:block;clear:both;}
-.board-top-menu ul li{float:left;box-sizing:border-box;width: 25%;}
-.board-top-menu ul li a{padding:25px 0;height:26px;text-indent:-9999px;display:block;width:100%;}
-.board-top-menu ul li:nth-child(1) a{background:url(../images/customer-1.png) no-repeat center center;}
-.board-top-menu ul li:nth-child(2) a{background:url(../images/customer-2.png) no-repeat center center;}
-.board-top-menu ul li:nth-child(3) a{background:url(../images/customer-4.png) no-repeat center center;}
-.board-top-menu ul li:nth-child(4) a{background:url(../images/customer-5.png) no-repeat center center;}
-.board-top-menu ul li:nth-child(5) a{background:url(../images/customer-3.png) no-repeat center center;}
-.board-top-menu ul li:nth-child(1) a.on{background:url(../images/customer-1-on.png) no-repeat center center;}
-.board-top-menu ul li:nth-child(2) a.on{background:url(../images/customer-2-on.png) no-repeat center center;}
-.board-top-menu ul li:nth-child(3) a.on{background:url(../images/customer-3-on.png) no-repeat center center;}
-.board-top-menu ul li:nth-child(4) a.on{background:url(../images/customer-4-on.png) no-repeat center center;}
-.board-top-menu ul li:nth-child(5) a.on{background:url(../images/customer-5-on.png) no-repeat center center;}
-.board-top-menu ul li a em{display:block;border-left:1px solid #eaeaea;height:26px;}
-.board-top-menu ul li:first-child a em{border-left:none;}

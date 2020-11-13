@@ -36,4 +36,3 @@ mark, rp, rt, ruby, summary, time{ display: inline }
 input[type="text"]{width: 99%;border: 0;padding: 7px 0;vertical-align: initial;}
 textarea:focus, 
 input[type="text"]:focus{border: 1px solid #efefef;border-radius: 3px;}
-select{width: 86%;padding: 1.5%;border: 1px solid #eee;border-radius: 5px;}
