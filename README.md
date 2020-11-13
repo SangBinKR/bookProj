@@ -33,11 +33,4 @@ https://docs.google.com/document/d/1RQDDsJciE-XwVYH_tseK5u28UeBb-HkSt1Xl-WKzGcM/
 장르에 따른 추천책
 희망도서 신청
 
-### 1.4. DB설정
-1. Hostname : 192.168.1.22 
-2. Port : 3306
-3. Username : team2_db
-4. password : store in Vault 클릭 후 abcd1234
-5. deFault Schema : team_db
-
 
