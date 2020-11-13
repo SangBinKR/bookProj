@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="ko">
 <head>
@@ -75,8 +74,7 @@
 							<li class="btnLogOut"><a href="#">로그아웃</a></li>
 							<li><a href="https://www.bookcube.com/mypage.asp?list=_main" class="mypop on">MY</a></li>
 							<li><a href="https://www.bookcube.com/mypage.asp?list=_cart">책바구니</a></li>
-							<img src="mypageimg/alarm-icon.png">
-							<li class="alarm"><a href="">알리미</span></a></li>
+							<li class="alarm"><a href="#">알리미</span></a></li>
 						</ul>
 					</fieldset>
 				</form>
@@ -90,19 +88,19 @@
 							</div>
 							<ul>
 								<li>
-									<img src="mypageimg/my-1.1.png">
+									<p>북캐시</p>
 									<p>0원</p>
 								</li>
 								<li>
-									<img src="mypageimg/my-2.2.png">
+									<p>적립금</p>
 									<p>0원</p>
 								</li>
 								<li>
-									<img src="mypageimg/my-3.3.png">
+									<p>쿠폰/상품권</p>
 									<p>0장</p>
 								</li>
 								<li>
-									<img src="mypageimg/my-4.4.png">
+									<p>무료이용권</p>
 									<p>0장</p>
 								</li>
 							</ul>
@@ -506,6 +504,7 @@ $(function(){
 									<p>0원</p>
 									<div class="mysel">
 										<a href="javascript:;" class="v-btn" data-fname="bookcash">내역보기 &gt;</a>
+
 										<a href="https://www.bookcube.com/order/bookcash.asp">충전하기 &gt;</a>
 									</div>
 									<div class="my-frame bookcash">
@@ -560,22 +559,21 @@ $(function(){
 							});
 						</script>
 						<div class="mypage-box-bottom">
-						
 							<div>
 								<ul>
 									<li>
 										<h4>구매관리</h4>
 										<ul>
-											<li><a href="purchaselist.html" class="">구매목록</a></li>
-											<li><a href="bookbasket.html" class="">책바구니</a></li>
-											<li><a href="purchaselist.html" class="">주문내역</a></li>
+											<li><a href="my_shoplist.html" class="">구매목록</a></li>
+											<li><a href="my_basket.html" class="on">책바구니</a></li>
+											<li><a href="my_gudok.html" class="">구독내역</a></li>
 										</ul>
 									</li>
 									<li>
 										<h4>나의 활동</h4>
 										<ul>
-											<li><a href="mymovement.html" class="on">나의활동</a></li>
-											<li><a href="wwish.html" class="">선호장르/선호작가</a></li>
+											<li><a href="my_active.html" class="">서평/댓글</a></li>
+											<li><a href="my_wish.html" class="">선호장르/선호작가</a></li>
 										</ul>
 									</li>
 								</ul>
@@ -585,8 +583,8 @@ $(function(){
 									<li>
 										<img src="mypageimg/my-5.png">
 										<div>
-											<a href="../mypage.asp?list=_gift_receive">받은 선물함 &gt;</a>
-											<a href="../mypage.asp?list=_gift_send">보낸 선물함 &gt;</a>
+											<a href="my_receivegift.html">받은 선물함 &gt;</a>
+											<a href="my_sendgift.html">보낸 선물함 &gt;</a>
 										</div>
 									</li>
 									<!--li>
@@ -604,34 +602,239 @@ $(function(){
 					</div>
 				</div>
 				<div class="mypage-bottom">
+				
 				<body style="">
 <div class="frame">
-	<h3>나의 활동</h3>
-	<div class="tab gift-tab">
+	<h3>책바구니</h3>
+	<div class="tab">
 		<ul>
-			<li><a href="/mypage/_review.asp" class="on">도서</a></li>
-		</ul><p class="no">작성된 리뷰가 없습니다.</p>
+			<li><a href="../javascript:;" class="on">서점 (0)</a></li>
+			<li><a href="../javascript:parent.goUrl('/mypage.asp?list=_cart_serial');">웹소설 (0)</a></li>
+			<li><a href="../javascript:parent.goUrl('/mypage.asp?list=_cart_toon');">웹툰 (0)</a></li>
+		</ul>
+		<div class="tab-sort">
+			<div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="" class="allchkSeries">
+						<span><i></i></span>
+					</label>
+				</div>
+				<a href="javascript:;" class="btn carDel">삭제</a>
+				<div class="k-array">
+					<input type="radio" name="" id="" checked="">
+					<label for="" class="radio deduction_yn" data-deduction-yn=""><span class="radio_on"><em>전체</em></span></label>
+					<input type="radio" name="" id="" checked="">
+					<label for="" class="radio deduction_yn" data-deduction-yn="1"><span class="radio_off"><em>소득공제 가능</em></span></label>
+					<input type="radio" name="" id="" checked="">
+					<label for="" class="radio deduction_yn" data-deduction-yn="0"><span class="radio_off"><em>소득공제 불가</em></span></label>
+				</div>
+			</div>
+		</div>
+		<p class="no">책바구니에 담긴 도서가 없습니다.</p>
+		<div class="tab-sort">
+			<div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="" class="allchkSeries">
+						<span><i></i></span>
+					</label>
+				</div>
+				<a href="javascript:;" class="btn carDel">삭제</a>
+			</div>
+		</div>
+		<div class="payment-result basket">
+			<p>총 주문 상품 수 : <span class="totalbookcnt">0권</span></p>
+			<p>총 결제 금액 : <span class="totalamount">0원</span></p>
+			<a href="javascript:parent.goUrl('/main.asp');" class="btn">쇼핑 계속하기</a>
+			<input type="button" class="orderbtn" value="주문하기">
+		</div>
+	</div>
+	<div class="ps-box">
+		<ul>
+			<li>- 쿠폰/상품권은 결제하기 페이지에서 적용이 가능합니다.</li>
+			<li>- 이용에 문의사항이 있으시다면, 고객센터 &gt; FAQ를 참고해 주시거나, 고객센터 &gt; 1:1문의를 이용해 주시기 바랍니다.</li>
+			<li>- 다운로드를 하신 컨텐츠는 주문 취소 및 환불이 불가능합니다.</li>
+		</ul>
 	</div>
 </div>
 
 
 <script>
-	$(function () { $("#mypageList", parent.document).height(document.body.scrollHeight); });
+/*
+	$(function(){
+		$(".file").hide();
+		$("#mypageList", parent.document).height(document.body.scrollHeight);
+
+		$('.deduction_yn').click(function(){
+			var deduction_yn = $(this).data("deduction-yn");	
+			location.href = "/mypage/_cart.asp?deduction_yn="+ deduction_yn ;
+			return false;
+		});
+
+		$('.btn.down').click(function(){
+			var series_num = $(this).data("series-num");			
+			if ($(this).html() == "목록열기"){
+				$(this).html("목록닫기");
+			}else{
+				$(this).html("목록열기");
+			}
+			$(".file").each(function(){
+				if ($(this).data("series-num") == series_num){
+					if($(this).css("display") == "none"){ $(this).show(); }else{ $(this).hide(); }
+				}
+			});
+			$("#mypageList", parent.document).height($("html,body").height());
+		});
+
+		$(".allchkSeries").click(function(){ 				
+			if ($(this).is(":checked")){   
+				$(".chkSeries").prop("checked",true);	//전체선택 체크된경우
+				$(".chkBook").prop("checked",true);	//전체선택 체크된경우
+				$(".allchkSeries").prop("checked",true);	//전체선택 체크된경우
+			}else{
+				$(".chkSeries").prop("checked",false);	         //전체선택 체크 해제된경우
+				$(".chkBook").prop("checked",false);	         //전체선택 체크 해제된경우
+				$(".allchkSeries").prop("checked",false);	         //전체선택 체크 해제된경우				
+			}
+
+			var play = cartset();
+		 });	
+
+		$(".chkSeries").click(function(){			
+			$(".allchkSeries").prop("checked",true);
+
+			var series_num = $(this).val();
+
+			if (this.checked){
+				$('input:checkbox[name="book_num"]').each(function() {
+					if ($(this).data("series-num") == series_num){
+						$(this).prop("checked",true);
+					}else{
+						if(!this.checked){$(".allchkSeries").prop("checked",false);}
+					}
+				});
+			}else{
+				$('input:checkbox[name="book_num"]').each(function() {
+					if ($(this).data("series-num") == series_num){
+						$(this).prop("checked",false);
+						$(".allchkSeries").prop("checked",false);
+					}else{
+						if(!this.checked){$(".allchkSeries").prop("checked",false);}
+					}
+				});				
+			}
+			var play = cartset();
+		});	
+
+		$(".chkBook").click(function(){
+			$(".allchkSeries").prop("checked",true);
+
+			var series_num = $(this).data("series-num");
+
+			$('input:checkbox[name="series_num"]').each(function() {
+				if ($(this).val() == series_num){$(this).prop("checked",true);}
+			});
+
+			$('input:checkbox[name="book_num"]').each(function() {
+				if(!this.checked){
+					if ($(this).data("series-num") == series_num){
+						$('input:checkbox[name="series_num"]').each(function() {
+							if ($(this).val() == series_num){
+								$(this).prop("checked",false);							
+							}
+							
+						});				
+					}					
+					$(".allchkSeries").prop("checked",false);
+				}
+			});	
+			var play = cartset();
+		});	
+
+		function cartset(){
+			var total_price = 0 ;
+			var total_cnt = 0 ;
+			$('input:checkbox[name="book_num"]').each(function() {
+				if(this.checked){
+					total_price += $(this).data("price");
+					total_cnt += 1 ;
+				}
+			});	
+	
+			$('input:checkbox[name="series_num"]').each(function() {
+				if(this.checked){//checked 처리된 항목의 값
+					total_price += $(this).data("price");
+					var series_num = $(this).val();
+					$('input:checkbox[name="book_num"]').each(function() {
+						if ($(this).data("series-num") == series_num){
+							total_price -= $(this).data("price");
+						}
+					});	
+				}					
+			});	
+			
+			$(".totalbookcnt").html(total_cnt +"권");
+			$(".totalamount").html(commify(total_price) +"원");
+		}
+
+		$(".orderbtn").click(function(){
+			var book_num_arr = "";
+			$('input:checkbox[name="book_num"]').each(function() {
+				if(this.checked){
+					var strType = $(this).data("type");
+					var series_num = $(this).data("series-num");
+					if (book_num_arr.length > 0 ){book_num_arr += "," ;}
+					book_num_arr += series_num +'-'+ $(this).val() + '-' + strType;
+				}						
+			});				
+
+			$.post("/data/_instantBuyCart.asp", {book_num_arr : book_num_arr}, function(data){						
+				if(data.success){
+					parent.goUrl(httpsUrl +"/order/book.asp");
+				}else{
+					alert(data.message);
+				}
+			}, "json");		
+		});	
+
+		$(".carDel").click(function(){
+			var book_num_arr = "";
+			$('input:checkbox[name="book_num"]').each(function() {
+				if(this.checked){
+					var series_num = $(this).data("series-num");
+					if (book_num_arr.length > 0 ){book_num_arr += "," ;}
+					book_num_arr += series_num +'-'+ $(this).val();
+				}						
+			});				
+
+			$.post("/data/_cart_delete.asp", {book_num_arr : book_num_arr}, function(data){						
+				if(data.success){
+					alert('삭제되었습니다.');
+					location.reload();
+				}else{
+					alert(data.message);
+				}
+			}, "json");		
+		});	
+	});
+	*/
 </script>
 </body>
-</html>		
+
+	
 <footer>
 	<div class="footer-top">
 		<div class="notice-wrap">
 			<div class="notice-inner">
-				<p><a href="../customer.asp?page=notice">공지사항</a></p>
+				<p><a href="/customer.asp?page=notice">공지사항</a></p>
 				<div class="swiper-container notice">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
-							<a href="../customer.asp?page=notice&num=112688&page2=view&pageNum=1">장르/만화 정액권 판매 종료 예정 안내<span>2020-10-27</span></a>
+							<a href="/customer.asp?page=notice&num=112688&page2=view&pageNum=1">장르/만화 정액권 판매 종료 예정 안내<span>2020-10-27</span></a>
 						</div>
 						<div class="swiper-slide">
-							<a href="../customer.asp?page=notice&num=112679&page2=view&pageNum=1">&lt;메리 미 (Marry Me)%gt; 적립금 지급 안내<span>2020-10-27</span></a>
+							<a href="/customer.asp?page=notice&num=112679&page2=view&pageNum=1">&lt;메리 미 (Marry Me)%gt; 적립금 지급 안내<span>2020-10-27</span></a>
 						</div>						
 					</div>
 				</div>
@@ -652,17 +855,17 @@ $(function(){
 			<div class="service">
 				<h4>서비스</h4>
 				<div>
-					<p><a href="../b2b.asp">전자도서관</a></p>
-					<p><a href="../customer.asp?page=viewer">앱 다운로드</a></p>
+					<p><a href="/b2b.asp">전자도서관</a></p>
+					<p><a href="/customer.asp?page=viewer">앱 다운로드</a></p>
 				</div>
 			</div>
 			<div class="short-cut">
 				<h4>바로가기</h4>
 				<div>
-					<p><a href="../coupon.asp">쿠폰등록</a></p>
+					<p><a href="/coupon.asp">쿠폰등록</a></p>
 					<p><a href="https://www.898.tv/bookcube">원격 연결</a></p>
-					<p><a href="../order/bookcash.asp">북캐시 충전</a></p>
-					<p><a href="../mypage.asp?list=_main">마이페이지</a></p>
+					<p><a href="/order/bookcash.asp">북캐시 충전</a></p>
+					<p><a href="/mypage.asp?list=_main">마이페이지</a></p>
 				</div>
 			</div>
 		</div>
@@ -670,18 +873,29 @@ $(function(){
 	<div class="footer-inner">
 		<ul class="f-lnb">
 			<li><a href="http://www.bookcubenetworks.co.kr">회사소개</a></li>
-			<li><a href="../customer.asp?page=notice&num=24007&page2=view&pageNum=15">이용약관</a></li>
-			<li><a href="../customer.asp?page=notice&num=24264&page2=view&pageNum=15">개인정보보호정책</a></li>
-			<li><a href="../customer.asp?page=notice&num=104583&page2=view&pageNum=1">청소년보호정책</a></li>
+			<li><a href="/customer.asp?page=notice&num=24007&page2=view&pageNum=15">이용약관</a></li>
+			<li><a href="/customer.asp?page=notice&num=24264&page2=view&pageNum=15">개인정보보호정책</a></li>
+			<li><a href="/customer.asp?page=notice&num=104583&page2=view&pageNum=1">청소년보호정책</a></li>
 			<li><a href="javascript:;" onclick="window.open('http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1138624199', 'bizCommPop', 'scrollbars=yes, width=750,height=700;')">사업자정보확인</a></li>
-			<li><a href="../partner.asp">제휴문의</a></li>
+			<li><a href="/partner.asp">제휴문의</a></li>
 			<li><a href="http://scm.bookcubenetworks.com">작가/출판사 전용메뉴</a></li>
 		</ul>
 		<div class="f-banner">
+			<ul>
+				<li><a href="https://play.google.com/store/apps/details?id=com.bookcube.bookplayer">구글플레이</a></li>
+				<li><a href="https://itunes.apple.com/kr/app/bugkyubeu-naeseojae/id576288015?mt=8">앱스토어</a></li>
+				<li><a href="javascript:;" onclick="pop.open('#so')">도서.공연비 소득공제 사업자</a></li>
+				<li><a href="mailto:webmaster@bookcube.com"><span></span>이메일문의</a></li>
+				<li><a href="https://twitter.com/bookcube">트위터</a></li>
+				<li><a href="https://blog.naver.com/bookcube_">네이버 블로그</a></li>
+				<li><a href="https://www.facebook.com/bookcube">페이스북</a></li>
+				<li><a href="https://www.instagram.com/bookcube_/">인스타그램</a></li>  
+				<li><a href="https://www.youtube.com/channel/UCXxNJ178OlQBDHkfWTMdNgA">유튜브</a></li>
+			</ul>
 			<div class="so-pop blind" id="so">
 				<div class="login-bg"></div>
 				<div class="so">
-					<img src="../images/main/so-img.png" alt="도서.공연비 소득공제 사업자 관련 이미지">
+					<img src="/images/main/so-img.png" alt="도서.공연비 소득공제 사업자 관련 이미지">
 					<p>소득공제 대상 사업자 인증번호<br><span>312018060044</span></p>
 					<button onclick="pop.close('#so')">닫기</button>
 				</div>
@@ -702,7 +916,7 @@ $(function(){
 		</address>
 		<div class="copy-text">
 			<p>Copyright © BOOKCUBENETWORKS Co.,Ltd. All Rights Reserved.</p>
-			<img src="../novel/images/novel/site.png" alt='클린사이트' usemap="#cleanSite" />
+			<img src="/novel/images/novel/site.png" alt='클린사이트' usemap="#cleanSite" />
 			<map name="cleanSite">
 				<area shape="RECT" coords="1,1,47,43" href="https://www.copyrightok.kr/" target="_blank" />
 			</map>

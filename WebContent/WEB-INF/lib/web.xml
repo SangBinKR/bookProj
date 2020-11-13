@@ -7,4 +7,10 @@
         <welcome-file>index.jsp</welcome-file>
         <welcome-file>main.jsp</welcome-file>
     </welcome-file-list>
+    <servlet-mapping>
+    	<servlet-name>default</servlet-name>
+    	<url-pattern>*.css</url-pattern>
+    	<url-pattern>*.js</url-pattern>
+    	<url-pattern>*.gif</url-pattern>
+    </servlet-mapping>
 </web-app>

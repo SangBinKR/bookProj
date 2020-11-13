@@ -38,12 +38,13 @@
 <link type="text/css" rel="stylesheet" href="../css/slick.css" />
 <link type="text/css" rel="stylesheet"  href="../js/lib/swipe/swiper.css" />
 <script type="text/javascript" src="../js/bookcube.js?200519"></script>
-<script type="text/javascript" src="../js/lib/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../js/lib/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="../js/lib/jquery.cookie.js"></script>
 <script type="text/javascript" src="../js/lib/slick.min.js"></script>
 <script type="text/javascript" src="../js/slimScroll.js"></script>
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript" src="../js/sub.js"></script>
 <script type="text/javascript" src="../js/placeholders.min.js"></script>
 <script type="text/javascript" src="../js/lib/swipe/swiper-4.3.min.js"></script>
 
@@ -126,211 +127,19 @@
 						<p><a href="javascript:;" class="">자동완성 끄기</a></p>
 					</div>
 				</div>
-				<script>
-					$(function(){
-						// 총알검색창 display 조정
-						$('.search_input').keyup(function(event){
-							var key = window.event ? event.keyCode : event.which;    
-							if (key  != 13 && key  != 38 && key  != 37 && key  != 39 && key  != 40 ) {// not enter							
-								sniperSearch(); 
-							}
-						});
-
-						// 검색창 닫기	
-						$("body").click(function(){
-							$(".fastSearch").fadeOut(100);
-						});
-						$(".fastSearch").on("click",function(event){
-							event.stopPropagation();
-						});
-
-						//키보드 기능 추가
-						
-						function keyup(e){
-							var i = 0;
-							var frsFlag = true;
-							var ie11Flag = false;
-							
-							$(".search input").on("keyup",function(e){
-								var a  = $(".fastUl li a");
-								var aLen = $(".fastUl li a").length -1;
-								var address = $(".fastUl li a.on").attr("href");
-								var valText = $(a).find(".fsTitle").text();
-								var agent = navigator.userAgent.toLowerCase();
-								if(navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1){
-									ie11Flag = true;
-								}
-								if(e.keyCode == 40){
-									if(i>aLen){
-										i = 0;	
-									}
-									if(ie11Flag){
-										if( e.keyCode == 40 && frsFlag){
-											var ev = jQuery.Event( "keyup", { keyCode: 39 } );
-											jQuery(this).trigger(ev);
-											frsFlag = false;
-											return;
-										}
-									}
-									i++;
-									$(a).removeClass("on");
-									$(a).eq(i-1).addClass("on");
-				
-								//	$(this).val($(a).eq(i-1).find(".fsTitle").text());
-									
-								}else if(e.keyCode == 38){
-									i--;
-									if(i<1){
-										i=aLen+1;
-									}
-									if(ie11Flag){
-										if( e.keyCode == 38 && frsFlag){
-											var ev = jQuery.Event( "keyup", { keyCode: 40 } );
-											jQuery(this).trigger(ev);
-											frsFlag = false;
-											return;
-										}
-									}
-									$(a).removeClass("on");
-									$(a).eq(i-1).addClass("on");
-								//	$(this).val($(a).eq(i-1).find(".fsTitle").text());
-										
-								}else if(e.keyCode == 13){
-									if($(a).hasClass("on")){
-										location.href=address;
-									}else{
-										frmSearchSubmit();
-									}		
-								}else if(e.keyCode == 39){
-									return
-								}else{
-									$(a).removeClass("on");
-									i=0;
-								}		
-							});	
-						}
-						
-						setTimeout(keyup,0);
-
-						$(".auto-complete a").on("click",function(){
-							if($(this).hasClass("off")){
-								$(this).removeClass("off");
-								$(this).text("자동완성 끄기");
-								$(".fastRight").show();
-								$(".auto-complete p:first").hide();
-								$.cookie('sniperYN', 'Y', { path : '/', expires : 100});
-							}else{
-								$(this).addClass("off");
-								$(this).text("자동완성 켜기");
-								$(".fastRight").hide();
-								$(".auto-complete p").show();
-								$.cookie('sniperYN', 'N', { path : '/', expires : 100});
-							}								
-						});
-					});
-
-					/* enter 제거 */
-					function getEnterRemove(val){
-						var value = val;
-						try{
-							value = value.replace(/\r/g, " ");//엔터제거
-							value = value.replace(/\n/g, " ");//행바꿈제거
-						}catch(e){
-							alert(e);
-						}	
-						return value; 
-					}
-
-					function frmSearchSubmit(){		
-							
-						var objFrm = $("#searchFrm") ;
-						if ($(".search_input").val() == ''){
-							alert('검색어를 검색해주세요.');
-							$(".search_input").focus();			
-							return ;
-						}else{
-							objFrm.attr("method","get");
-							objFrm.attr("action","/search.asp");
-							objFrm.submit();
-						}		
-					}
-
-					function sniperSearch() {
-						//$(".fastRight .fastUl li").remove(); 
-						//$(".fastSearch").css("display","none");
-
-						var searchVal = getEnterRemove($(".search_input").val());
-						var table = $(".fastRight .fastUl").get(0);
-						var detail_url = "";
-						var img_url = "";
-						var img_cls = "";
-/*
-						$(".fastRight ul").remove(); 
-						$(".fastRight p").remove(); 
-						$(".fastRight").append("<p>청소년 유해어가 포함된 단어로는<br />검색 하실 수 없습니다.<br />로그인 및 성인인증 후 재검색 해주세요.</p>");
-						$(".fastSearch").css("display","block");
-*/
-						$.ajax({
-							url : '/data/_ebook_search.asp',
-							data : {search : searchVal},
-							type : 'post',
-							dataType : 'json',
-							headers : {'cache-control' : "no-cache"},
-							cache : false,
-							success : function(data){
-								$(".fastRight .fastUl li").remove(); 
-								if (data.result.length > 0){	
-									if (data.result[0].filter_yn == "Y"){
-										newTr = "<li class='harmful'>청소년 유해어가 포함된 단어로는<br />검색 하실 수 없습니다.<br />로그인 및 성인인증 후 재검색 해주세요.</li>";
-										$(table).append(newTr);
-										$(".fastSearch").css("display","block");
-									}else{
-										var newTr = "" ;
-											for(var i in data.result){
-												detail_url = "<a href='"+ httpUrl +"/detail.asp?series_num="+ data.result[i].series_num +"&page="+ data.result[i].order_type +"'>";
-												if (data.result[i].cover_display_yn == "0" && $.cookie("adult_yn") != "Y"){
-													img_url = "	<img src='/images/contents/adult_19_94.jpg' alt='19금 표지 이미지' />";
-													//img_cls = "<span class='s19'>성인물</span>";
-												}else{
-													img_url = "	<img src='https://bookimg.bookcube.com/91/"+ data.result[i].book_num.substring(0, 4)+"/"+ data.result[i].book_num +".jpg' alt='"+ data.result[i].title +"' />";
-													img_cls = "";
-												}
-
-												newTr =
-												"<li>" + detail_url +
-												"		<div class='fsThum'>" +
-												"			<span class='im_br'>" + img_url + 
-												"			</span>" + img_cls +
-												"		</div>" +
-												"		<div class='fsInfo'>" +
-												"			<p class='fsTitle'>"+ data.result[i].title +"</p>" +
-												"			<p class='fsAuthor'>"+ data.result[i].author +" 저<em>|</em>"+ data.result[i].publisher +"</p>" +
-												"		</div>" +
-												"	</a>" +							
-												"</li>";									
-												$(table).append(newTr);
-												$(".fastSearch").css("display","block");
-											}	
-									}
-								}
-							},
-							error: function() {}
-						});
-					}
-				</script>
 			</div> 
 			<div class="h-top-bottom">
 				<h2 class="hide">메인메뉴</h2>
 				<ul class="gnb">
-					<li><a href="../main/index.html" class="on">홈</a></li>
-					<li><a href="../sub2/board.jsp">게시판</a></li>
+					<li><a href="../main/index.jsp" class="on">홈</a></li>
+					<li><a href="../sub2/free_board.jsp">게시판</a></li>
 					<li><a href="../sub5/card.jsp">카트</a></li>
 					<li><a href="../sub5/mypage.jsp">마이페이지</a></li>
 					<!-- <li><a href="https://www.bookcube.com/toon/main.asp">관리자페이지</a></li> -->
 				</ul>
 				<ul class="lnb">
 					<li><a href="../sub5/charge.jsp">캐시충전</a>
-					<li><a href="https://www.bookcube.com/customer.asp">고객센터</a>
+					<li><a href="../sub5/notice.jsp">고객센터</a>
 				</ul>
 			</div>
 		</div>
@@ -361,121 +170,59 @@
 		
 	</div>
 	<div class="m-category">
-		<div class="category-inner">
-			<div>
-				<ul class="">
-					<li><a href="../sub1/list.jsp">소설</a></li>	
-					<li><a href="../sub1/list.jsp">에세이</a></li>	
-					<li><a href="../sub1/list.jsp">여행</a></li>	
-					<li><a href="../sub1/list.jsp">시</a></li>	
-				</ul>
+		<div class="main-inner">
+			<div class="category-inner">
+				<div>
+					<ul class="">
+						<li><a href="../sub1/list.jsp">소설</a></li>	
+						<li><a href="../sub1/list.jsp">에세이</a></li>	
+						<li><a href="../sub1/list.jsp">여행</a></li>	
+						<li><a href="../sub1/list.jsp">시</a></li>	
+					</ul>
+				</div>
+				<div>
+					<ul class="">
+						<li><a href="../sub1/list.jsp">자기개발</a></li>	
+						<li><a href="../sub1/list.jsp">경영</a></li>	
+						<li><a href="../sub1/list.jsp">경제</a></li>	
+						<li><a href="../sub1/list.jsp">마케팅</a></li>	
+						<li><a href="../sub1/list.jsp">역사</a></li>
+						<li><a href="../sub1/list.jsp">철학</a></li>	
+						<li><a href="../sub1/list.jsp">종교</a></li>	
+						<li><a href="../sub1/list.jsp">정치</a></li>								
+						<li><a href="../sub1/list.jsp">예술</a></li>	
+						<li><a href="../sub1/list.jsp">인문</a></li>					
+					</ul>
+				</div>
+				<div>
+					<ul class="">
+						<li><a href="../sub1/list.jsp">수학</a></li>	
+						<li><a href="../sub1/list.jsp">과학</a></li>	
+						<li><a href="../sub1/list.jsp">IT/비즈니스</a></li>	
+						<li><a href="../sub1/list.jsp">자격증</a></li>	
+						<li><a href="../sub1/list.jsp">프로그래밍</a></li>		
+					</ul>
+				</div>
+				<div>
+					<ul class="">
+						<li><a href="../sub1/list.jsp">건강</a></li>	
+						<li><a href="../sub1/list.jsp">요리</a></li>	
+						<li><a href="../sub1/list.jsp">스포츠</a></li>	
+						<li><a href="../sub1/list.jsp">결혼/임신/출산</a></li>	
+						<li><a href="../sub1/list.jsp">기타</a></li>		
+					</ul>
+				</div>
+				<div>
+					<ul class="">
+						<li><a href="../sub1/list.jsp">만화</a></li>	
+						<li><a href="../sub1/list.jsp">웹소설</a></li>	
+					</ul>
+				</div>
+				<a href="javascript:;" class="category-close">close</a>
 			</div>
-			<div>
-				<ul class="">
-					<li><a href="../sub1/list.jsp">자기개발</a></li>	
-					<li><a href="../sub1/list.jsp">경영</a></li>	
-					<li><a href="../sub1/list.jsp">경제</a></li>	
-					<li><a href="../sub1/list.jsp">마케팅</a></li>	
-					<li><a href="../sub1/list.jsp">역사</a></li>
-					<li><a href="../sub1/list.jsp">철학</a></li>	
-					<li><a href="../sub1/list.jsp">종교</a></li>	
-					<li><a href="../sub1/list.jsp">정치</a></li>								
-					<li><a href="../sub1/list.jsp">예술</a></li>	
-					<li><a href="../sub1/list.jsp">인문</a></li>					
-				</ul>
-			</div>
-			<div>
-				<ul class="">
-					<li><a href="../sub1/list.jsp">수학</a></li>	
-					<li><a href="../sub1/list.jsp">과학</a></li>	
-					<li><a href="../sub1/list.jsp">IT/비즈니스</a></li>	
-					<li><a href="../sub1/list.jsp">자격증</a></li>	
-					<li><a href="../sub1/list.jsp">프로그래밍</a></li>		
-				</ul>
-			</div>
-			<div>
-				<ul class="">
-					<li><a href="../sub1/list.jsp">건강</a></li>	
-					<li><a href="../sub1/list.jsp">요리</a></li>	
-					<li><a href="../sub1/list.jsp">스포츠</a></li>	
-					<li><a href="../sub1/list.jsp">결혼/임신/출산</a></li>	
-					<li><a href="../sub1/list.jsp">기타</a></li>		
-				</ul>
-			</div>
-			<div>
-				<ul class="">
-					<li><a href="../sub1/list.jsp">만화</a></li>	
-					<li><a href="../sub1/list.jsp">웹소설</a></li>	
-				</ul>
-			</div>
-			<a href="javascript:;" class="category-close">close</a>
 		</div>
 	</div>
 </div>
-<script>
-$(function(){	
-	//카테고리		
-	$(".h-bottom-left ul > li").on("click",function(){
-		
-		$(".m-category").slideDown();	
-	});
-	$(".category-close").on("click",function(){
-		$(".m-category").slideUp();		
-	});
-	
-	//알리미
-	$("#alarm_view").attr("src", "/main/_alarm.asp");
-	var timer = 0;
-	$(".alarm").on("mouseenter",function(){
-		var speed = Math.abs(timer-$.now());
-		if(speed > 300) {
-			timer = $.now();
-			$("#alarm_view").attr("src", "/main/_alarm.asp");
-			if($(".my-wrap").css("display")== "block"){
-				$(".my-wrap").fadeOut();
-			}
-			$(".alarm_layer_box").fadeIn();
-		}
-	});
-	$(".alarm_layer_box").on("mouseleave",function(){
-		var speed = Math.abs(timer-$.now());
-		if(speed > 300) {
-			timer = $.now();
-			$(this).fadeOut();
-		}
-	});
-
-	//마이페이지 레이어팝업
-	var timer = 0;
-	$(".mypop.on").on("mouseenter",function(){
-		var speed = Math.abs(timer-$.now());
-		if(speed > 300) {
-			timer = $.now();
-			if($(".alarm_layer_box").css("display")== "block"){
-				$(".alarm_layer_box").fadeOut();
-			}
-			$(".my-wrap").fadeIn();
-		}
-	});
-	$(".my-wrap").on("mouseleave",function(){
-		var speed = Math.abs(timer-$.now());
-		if(speed > 300) {
-			timer = $.now();
-			$(this).fadeOut();
-		}
-	});
-
-	$(".btnLogOut").on("click",function(){
-		$.post("/data/_logout.asp",{} , function(data){					
-			if(data.success){
-				window.location.href = httpUrl+"/main.asp";
-			}else{
-				alert(data.message);
-			}
-		}, "json");
-	});
-});
-</script>
 <form name="sns_input_data">
 <input type="hidden" class="sns_input_site_id" value="">
 <input type="hidden" class="sns_input_id" value="">

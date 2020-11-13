@@ -5,15 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
 <!-- Google Tag Manager -->
-<script>
-	(function(w,d,s,l,i){
-		w[l]=w[l]||[];w[l].push({
-			'gtm.start': new Date().getTime(),event:'gtm.js'});
-			var f=d.getElementsByTagName(s)[0],
-			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-			j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-KP248RV');
-</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KP248RV');</script>
 <!-- End Google Tag Manager -->
 
 <meta charset="UTF-8">
@@ -30,8 +26,8 @@
 <meta property="og:locale" content="ko_KR">
 
 <title>e북포털 북큐브</title>
-<link rel="shortcut icon" type="image/x-icon" href="..images/bookcube_ci.ico">
-<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+<link rel="shortcut icon" type="image/x-icon" href="/images/icon/bookcube_ci.ico">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
 <link type="text/css" rel="stylesheet" href="../css/reset.css" />
 <link type="text/css" rel="stylesheet" href="../css/main.css?v=20200917" />
 <link type="text/css" rel="stylesheet" href="../css/slick.css" />
@@ -50,10 +46,10 @@
 <script type="text/javascript"> if(!wcs_add) var wcs_add = {}; wcs_add["wa"] = "75bf1248432b84"; wcs_do(); </script>
 <!-- naver-->
 <!-- kakao 로그인-->
-<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
 <body>
-	<div class="wrap" data-mypage-list="_main" data-item="">
+	<div class="wrap" data-page="">
 	
 <header>
 	<div class="header-top">
@@ -75,8 +71,7 @@
 							<li class="btnLogOut"><a href="#">로그아웃</a></li>
 							<li><a href="https://www.bookcube.com/mypage.asp?list=_main" class="mypop on">MY</a></li>
 							<li><a href="https://www.bookcube.com/mypage.asp?list=_cart">책바구니</a></li>
-							<img src="mypageimg/alarm-icon.png">
-							<li class="alarm"><a href="">알리미</span></a></li>
+							<li class="alarm"><a href="#">알리미</span></a></li>
 						</ul>
 					</fieldset>
 				</form>
@@ -90,19 +85,19 @@
 							</div>
 							<ul>
 								<li>
-									<img src="mypageimg/my-1.1.png">
+									<p>북캐시</p>
 									<p>0원</p>
 								</li>
 								<li>
-									<img src="mypageimg/my-2.2.png">
+									<p>적립금</p>
 									<p>0원</p>
 								</li>
 								<li>
-									<img src="mypageimg/my-3.3.png">
+									<p>쿠폰/상품권</p>
 									<p>0장</p>
 								</li>
 								<li>
-									<img src="mypageimg/my-4.4.png">
+									<p>무료이용권</p>
 									<p>0장</p>
 								</li>
 							</ul>
@@ -483,163 +478,65 @@ $(function(){
 	});
 });
 </script>	
-	<section class="sub" >
-		<div class="category-nav">
-			<div class="category-nav-inner">
-				<p>HOME > 마이페이지</p>
-			</div>
+	<section class="sub">
+		<div class="common-title">
+			<h3>회원 탈퇴</h3>
 		</div>
-		<div class="contents-wrap">
-			<div class="mypage">
-				<div class="mypage-top">
-					<div class="detail-inner">
-						<h3>마이페이지</h3>
-						<div class="mypage-box-top">
-							<ul>
-								<li>
-									<span class="kakaotalk">로그인정보</span> <!-- bookcube,kakaotalk,naver,twitter,facebook,payco-->
-									<p><span>계정 님</span></p>
-									<a href="https://www.bookcube.com/member_info.asp" class="btn">회원정보</a>
-								</li>
-								<li>
-								<img src="mypageimg/my-1.png">
-									<p>0원</p>
-									<div class="mysel">
-										<a href="javascript:;" class="v-btn" data-fname="bookcash">내역보기 &gt;</a>
-
-										<a href="https://www.bookcube.com/order/bookcash.asp">충전하기 &gt;</a>
-									</div>
-									<div class="my-frame bookcash">
-									<iframe src="../mypage/_bookcash_history.asp?bookcash=0" width="100%" frameborder="0" name="bookcash_history" id="bookcash_history" scrolling="no"></iframe>
-									</div>
-								</li>
-								<li>
-									<img src="mypageimg/my-2.png">
-									<p>0원</p>
-									<div class="mysel">
-										<a href="javascript:;" class="v-btn" data-fname="saved">내역보기 &gt;</a>
-									</div>
-									<div class="my-frame saved">
-									<iframe src="../mypage/_savemoney_history.asp?savemoney=0&expire_savemoney=0" width="100%" frameborder="0" name="savemoney_history" id="savemoney_history" scrolling="no"></iframe>
-									</div>
-								</li>
-								<li>
-									<img src="mypageimg/my-3.png">
-									<p>0장</p>
-									<div class="mysel">
-										<a href="javascript:;" class="v-btn" data-fname="coupon">내역보기 &gt;</a>
-										<a href="https://www.bookcube.com/coupon.asp">등록하기 &gt;</a>
-									</div>
-									<div class="my-frame coupon">
-									<iframe src="../mypage/_coupon_history.asp" width="100%" frameborder="0" name="coupon_history" id="coupon_history" scrolling="no"></iframe>
-									</div>
-								</li>
-								<li>
-									<img src="mypageimg/my-4.png">
-									<p>0장</p>
-									<div class="mysel">
-										<a href="javascript:;" class="v-btn" data-fname="free">내역보기 &gt;</a>
-									</div>
-									<div class="my-frame free">
-										<iframe src="../mypage/_freeticket_history.asp" width="100%" frameborder="0" name="freeticket_history" id="freeticket_history" scrolling="no"></iframe>
-									</div>
-								</li>
-							</ul>
-						</div>
-						<script>
-							$(function(){
-								$(".v-btn").on("click",function(){
-									var fname = $(this).data("fname");
-									$(".my-frame").css("visibility","hidden");
-									$(".my-frame."+ fname).css("visibility","visible");	
-									return false;
-								});	
-								$(".mpop-close").on("click",function(){
-									$(this).parent().parent().parent().css("visibility","hidden");
-									return false;
-								});
-							});
-						</script>
-						<div class="mypage-box-bottom">
-						
-							<div>
-								<ul>
-									<li>
-										<h4>구매관리</h4>
-										<ul>
-											<li><a href="purchaselist.html" class="">구매목록</a></li>
-											<li><a href="bookbasket.html" class="">책바구니</a></li>
-											<li><a href="purchaselist.html" class="">주문내역</a></li>
-										</ul>
-									</li>
-									<li>
-										<h4>나의 활동</h4>
-										<ul>
-											<li><a href="mymovement.html" class="">나의활동</a></li>
-											<li><a href="wwish.html" class="">선호장르/선호작가</a></li>
-										</ul>
-									</li>
-								</ul>
-							</div>
-							<div>
-								<ul>
-									<li>
-										<img src="mypageimg/my-5.png">
-										<div>
-											<a href="receivegift.html">받은 선물함 &gt;</a>
-											<a href="sendgift.html">보낸 선물함 &gt;</a>
-										</div>
-									</li>
-									<!--li>
-										<p>장르정액권 : 29일 20시간 남음</p>
-									</li-->
-									<li>
-										<a href="https://www.bookcube.com/order/free_ticket.asp" data-mypage-list="_gift_receive"><p>장르정액권 구매하기 &gt;</p></a>
-									</li>
-									<li>
-										<a href="https://www.bookcube.com/order/free_ticket.asp" data-mypage-list="_gift_receive"><p>만화정액권 구매하기 &gt;</p></a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="mypage-bottom">
-				<body style="">
-<div class="frame">
-	<h3>선물함</h3>
-	<div class="tab gift-tab">
-		<ul>
-			<li><a href="receivegift.html" class="on">받은 선물함</a></li>
-			<li><a href="sendgift.html" class="">보낸 선물함</a></li>
-		</ul>
-		<div class="gift-ps">
+		<div class="user-fire">
 			<ul>
-				<li>- 선물 받은 도서는 구매목록에서 다운로드가 가능합니다.</li>
-				<li>- 대여의 이용기간은 선물쿠폰 등록 시점부터 적용됩니다.</li>
+				<li>- 회원님의 비밀 번호, 탈퇴 사유를 입력하셔서 본인 확인을 한 후 바로 회원탈퇴가 됩니다.</li>
+				<li>- 회원 탈퇴 버튼을 클릭하시면 회원님의 주문, 결제등의 개인 정보 기록을 삭제하므로 신중하게 선택해 주세요.</li>
+				<li>- 재가입시 탈퇴 전에 구매했던 주문 정보등은 복구되지 않습니다.</li>
+				<li>- 본인인증 완료한 아이디를 탈퇴 후 재가입 시 본인인증 혜택은 중복으로 지급되지 않습니다. 또한, 본인인증 회원만 참여 가능한 이벤트에서 제외됩니다.</li>
 			</ul>
-		</div><p class="no">받은 선물함이 비었습니다.</p>
-	</div>
-</div>
+			<div>
+				<a href="https://www.bookcube.com/customer.asp?page=notice&page2=view&num=24264&pageNum=1" target="_blank" class="btn">개인 정보 취급 방침</a>
+			</div>
+			<form action='' method='post' onsubmit="del_submit();">
+				<fieldset>
+					<legend>회원탈퇴 양식</legend>
+					<table class="customer-notice">
+						<caption>회원탈퇴 양식</caption>
+						<colgroup>
+							<col width="20%" />
+							<col width="80%" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>아이디</td>
+								<td>juny1993</td>
+							</tr>
+							<tr>
+								<td>비밀번호</td>
+								<td><input type="password" name='password' class="pwd" /></td>
+							</tr>
+							<tr>
+								<td>탈퇴사유</td>
+								<td><textarea name="leave_reason"></textarea></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="one-btn">
+						<input type="button" value='회원탈퇴' onclick="del_submit();" />
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</section>
 
-
-<script>
-	$(function () { $("#mypageList", parent.document).height(document.body.scrollHeight); });
-</script></body>
-				
-				
+	
 <footer>
 	<div class="footer-top">
 		<div class="notice-wrap">
 			<div class="notice-inner">
-				<p><a href="../customer.asp?page=notice">공지사항</a></p>
+				<p><a href="/customer.asp?page=notice">공지사항</a></p>
 				<div class="swiper-container notice">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
-							<a href="../customer.asp?page=notice&num=112688&page2=view&pageNum=1">장르/만화 정액권 판매 종료 예정 안내<span>2020-10-27</span></a>
+							<a href="/customer.asp?page=notice&num=112688&page2=view&pageNum=1">장르/만화 정액권 판매 종료 예정 안내<span>2020-10-27</span></a>
 						</div>
 						<div class="swiper-slide">
-							<a href="../customer.asp?page=notice&num=112679&page2=view&pageNum=1">&lt;메리 미 (Marry Me)%gt; 적립금 지급 안내<span>2020-10-27</span></a>
+							<a href="/customer.asp?page=notice&num=112679&page2=view&pageNum=1">메리 미 (Marry Me)〉 적립금 지급 안내<span>2020-10-27</span></a>
 						</div>						
 					</div>
 				</div>
@@ -660,17 +557,17 @@ $(function(){
 			<div class="service">
 				<h4>서비스</h4>
 				<div>
-					<p><a href="../b2b.asp">전자도서관</a></p>
-					<p><a href="../customer.asp?page=viewer">앱 다운로드</a></p>
+					<p><a href="/b2b.asp">전자도서관</a></p>
+					<p><a href="/customer.asp?page=viewer">앱 다운로드</a></p>
 				</div>
 			</div>
 			<div class="short-cut">
 				<h4>바로가기</h4>
 				<div>
-					<p><a href="../coupon.asp">쿠폰등록</a></p>
+					<p><a href="/coupon.asp">쿠폰등록</a></p>
 					<p><a href="https://www.898.tv/bookcube">원격 연결</a></p>
-					<p><a href="../order/bookcash.asp">북캐시 충전</a></p>
-					<p><a href="../mypage.asp?list=_main">마이페이지</a></p>
+					<p><a href="/order/bookcash.asp">북캐시 충전</a></p>
+					<p><a href="/mypage.asp?list=_main">마이페이지</a></p>
 				</div>
 			</div>
 		</div>
@@ -678,18 +575,29 @@ $(function(){
 	<div class="footer-inner">
 		<ul class="f-lnb">
 			<li><a href="http://www.bookcubenetworks.co.kr">회사소개</a></li>
-			<li><a href="../customer.asp?page=notice&num=24007&page2=view&pageNum=15">이용약관</a></li>
-			<li><a href="../customer.asp?page=notice&num=24264&page2=view&pageNum=15">개인정보보호정책</a></li>
-			<li><a href="../customer.asp?page=notice&num=104583&page2=view&pageNum=1">청소년보호정책</a></li>
+			<li><a href="/customer.asp?page=notice&num=24007&page2=view&pageNum=15">이용약관</a></li>
+			<li><a href="/customer.asp?page=notice&num=24264&page2=view&pageNum=15">개인정보보호정책</a></li>
+			<li><a href="/customer.asp?page=notice&num=104583&page2=view&pageNum=1">청소년보호정책</a></li>
 			<li><a href="javascript:;" onclick="window.open('http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1138624199', 'bizCommPop', 'scrollbars=yes, width=750,height=700;')">사업자정보확인</a></li>
-			<li><a href="../partner.asp">제휴문의</a></li>
+			<li><a href="/partner.asp">제휴문의</a></li>
 			<li><a href="http://scm.bookcubenetworks.com">작가/출판사 전용메뉴</a></li>
 		</ul>
 		<div class="f-banner">
+			<ul>
+				<li><a href="https://play.google.com/store/apps/details?id=com.bookcube.bookplayer">구글플레이</a></li>
+				<li><a href="https://itunes.apple.com/kr/app/bugkyubeu-naeseojae/id576288015?mt=8">앱스토어</a></li>
+				<li><a href="javascript:;" onclick="pop.open('#so')">도서.공연비 소득공제 사업자</a></li>
+				<li><a href="mailto:webmaster@bookcube.com"><span></span>이메일문의</a></li>
+				<li><a href="https://twitter.com/bookcube">트위터</a></li>
+				<li><a href="https://blog.naver.com/bookcube_">네이버 블로그</a></li>
+				<li><a href="https://www.facebook.com/bookcube">페이스북</a></li>
+				<li><a href="https://www.instagram.com/bookcube_/">인스타그램</a></li>  
+				<li><a href="https://www.youtube.com/channel/UCXxNJ178OlQBDHkfWTMdNgA">유튜브</a></li>
+			</ul>
 			<div class="so-pop blind" id="so">
 				<div class="login-bg"></div>
 				<div class="so">
-					<img src="../images/main/so-img.png" alt="도서.공연비 소득공제 사업자 관련 이미지">
+					<img src="/images/main/so-img.png" alt="도서.공연비 소득공제 사업자 관련 이미지">
 					<p>소득공제 대상 사업자 인증번호<br><span>312018060044</span></p>
 					<button onclick="pop.close('#so')">닫기</button>
 				</div>
@@ -710,7 +618,7 @@ $(function(){
 		</address>
 		<div class="copy-text">
 			<p>Copyright © BOOKCUBENETWORKS Co.,Ltd. All Rights Reserved.</p>
-			<img src="../novel/images/novel/site.png" alt='클린사이트' usemap="#cleanSite" />
+			<img src="/novel/images/novel/site.png" alt='클린사이트' usemap="#cleanSite" />
 			<map name="cleanSite">
 				<area shape="RECT" coords="1,1,47,43" href="https://www.copyrightok.kr/" target="_blank" />
 			</map>
@@ -761,10 +669,17 @@ var pop = {
 </body>
 </html>
 <script>
-	$(function(){
-		var strItem = $(".wrap").data("item");
-		var param = "";
-		if (strItem != ""){ param = "?item="+ strItem ;}
-		$('#mypageList').stop().attr('src', '/mypage/'+ $(".wrap").data("mypage-list") +'.asp'+ param) ;		
-	});
+function del_submit(){
+	var leave_reason = $(".customer-notice textarea").val();
+	var password = $(".pwd").val();
+
+	$.post("/data/_member_delete.asp", {leave_reason : leave_reason, password : password}, function(data){						
+		if(data.success){
+			goUrl(httpUrl +'/member_del.asp');		
+		}else{
+			alert(data.message);
+		}
+	}, "json");
+}
+
 </script>
